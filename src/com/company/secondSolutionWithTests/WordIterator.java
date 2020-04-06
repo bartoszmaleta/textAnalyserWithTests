@@ -22,4 +22,8 @@ public class WordIterator implements Iterator {
     public void remove() {
         this.index = 0;
     }
+
+    public void setIndexAtZero() {
+        this.index = 0;
+    }
 }

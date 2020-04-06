@@ -28,5 +28,6 @@ public class CharIterator implements Iterator {
     @Override
     public void remove() {
         this.index = 0;
+        System.out.println("qwe");
     }
 }

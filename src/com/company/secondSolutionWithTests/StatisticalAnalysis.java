@@ -5,15 +5,16 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-class StatisticalAnalysis {
+public class StatisticalAnalysis {
     Iterator<String> iter;
 
-    StatisticalAnalysis(Iterator<String> iter) {
+    public StatisticalAnalysis(Iterator<String> iter) {
         this.iter = iter;
     }
 
-    int countOf(String str) {
+    public int countOf(String str) {
         iter.remove();
+
         int counter = 0;
         while(iter.hasNext()){
             if(iter.next().toLowerCase().equals(str.toLowerCase())){
@@ -23,7 +24,7 @@ class StatisticalAnalysis {
         return counter;
     }
 
-    int dictionarySize() {
+    public int dictionarySize() {
         iter.remove();
 
         Set<String> words = new TreeSet<>();
@@ -34,7 +35,7 @@ class StatisticalAnalysis {
 
     }
 
-    int size() {
+    public int size() {
         iter.remove();
         int counter = 0;
         while (iter.hasNext()) {
@@ -44,7 +45,7 @@ class StatisticalAnalysis {
         return counter;
     }
 
-    Set<String> occureMoreThan(int allText) {
+    public Set<String> occureMoreThan(int allText) {
 
         Set<String> mostUsedWords = new TreeSet<>();
 
@@ -69,7 +70,8 @@ class StatisticalAnalysis {
         }
         return mostUsedWords;
     }
-    float countVowelsPercent(int allText){
+
+    public float countVowelsPercent(int allText){
         iter.remove();
         int counter = 0;
         while(iter.hasNext()){
@@ -83,11 +85,12 @@ class StatisticalAnalysis {
         }
         return (float) counter/allText*100;
     }
-    float ratio(String stringA, String stringB){
+
+    public float ratio(String stringA, String stringB){
         return (float) countOf(stringA)/countOf(stringB);
     }
-    float countPercentOfLetter(String str, int textSize){
 
+    public float countPercentOfLetter(String str, int textSize){
         int letterOccour = countOf(str);
         return (float) (letterOccour*100.0/textSize);
     }

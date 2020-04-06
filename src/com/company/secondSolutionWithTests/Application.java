@@ -19,6 +19,7 @@ public class Application {
                 view.print("Dict size:" + words.dictionarySize());
                 view.print("Most used words (>1%): " + words.occureMoreThan(words.size()));
                 view.print("'love' count: " + words.countOf("love"));
+                System.out.println("a = " + words.countOf("a"));
                 view.print("'hate' count: " + words.countOf("hate"));
                 view.print("'music' count: " + words.countOf("music"));
                 view.print("vowels %: " + chars.countVowelsPercent(chars.size()));
